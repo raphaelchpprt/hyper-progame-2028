@@ -1,0 +1,160 @@
+@import "~bootstrap/scss/bootstrap";
+
+$red: rgb(219, 32, 32);
+$bg-black: #151515;
+$br: 10px;
+
+@font-face {
+  font-family: "Big Noodles";
+  src: url("../font/big_noodle_titling.ttf");
+}
+
+h1 {
+  font-family: "Big Noodles";
+  font-size: 30px;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: $br;
+  border-top-right-radius: $br;
+}
+
+.cardGame {
+  border: none;
+  background-color: #202020;
+  color: white;
+  height: 350px;
+  border-radius: $br;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+.cardGame:hover {
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.1);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.19);
+}
+
+body {
+  background-color: $bg-black;
+  color: white;
+}
+
+#brand {
+  color: $red;
+  font-size: 100px;
+}
+
+.link-name,
+.link-name:visited {
+  text-decoration: none;
+  position: relative;
+  color: #ffffff;
+
+  &:after {
+    content: "";
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: #ffffff;
+    transition: 0.3s;
+  }
+
+  &:hover:after {
+    width: 100%;
+    background: #ffffff;
+  }
+
+  &:hover {
+    width: auto;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  &.block {
+    display: block;
+
+    &:hover {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.795); /* Black see-through */
+  color: #e2e1e1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 14px;
+  padding: 20px;
+  border-top-left-radius: $br;
+  border-top-right-radius: $br;
+  height: 200px;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container-hover:hover .overlay {
+  opacity: 1;
+}
+
+.img-platform {
+  height: 13px !important;
+}
+
+.game-name {
+  text-decoration: none;
+  color: white;
+}
+
+.game-name:hover {
+  text-decoration: none;
+  color: rgb(209, 209, 209);
+}
+
+.btn {
+  border-radius: $br;
+}
+
+.form-control {
+  border-radius: $br;
+}
+
+.btn-danger {
+  background-color: #eb2c2c;
+}
+
+.btn-danger:hover {
+  background-color: $red;
+
+  &:after {
+    background-color: $red;
+  }
+  &:active {
+    background-color: $red;
+  }
+}
+
+label {
+  position: relative;
+  display: block !important;
+}
+
+label:before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: url("../images/zoom.svg") center / contain no-repeat;
+}
