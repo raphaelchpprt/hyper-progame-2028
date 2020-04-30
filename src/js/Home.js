@@ -23,6 +23,9 @@ const Home = () => {
           let games = response.results;
           let gameId = 0;
           selectFilter();
+          setTimeout(function () {
+            document.querySelector(".trans--grow").classList.add("grow");
+          }, 275);
           games.forEach((article) => {
             articles += `
                     <div class="col-md-4 col-sm-6 mb-2">

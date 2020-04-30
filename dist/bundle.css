@@ -10120,3 +10120,13 @@ label:before {
 hr {
   border: 1px solid #db2020;
 }
+
+.trans--grow {
+  /* For Safari 3.1 to 6.0 */
+  transition: width 1s ease-out;
+  width: 0%;
+}
+
+.grow {
+  width: 100%;
+}
