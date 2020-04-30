@@ -49,21 +49,26 @@ const GameDetail = (argument) => {
           articleDOM.querySelector("p.release-date span").innerHTML = released;
           articleDOM.querySelector("p.description").innerHTML = description;
           for (let i = 0; i < developers.length; i++)
-            articleDOM.querySelector("p.developers span").innerHTML +=
-              developers[i].name + " ";
+            articleDOM.querySelector(
+              "p.developers span"
+            ).innerHTML += `<a class="link-name ml-2" href="#gamelist/?developers=${developers[i].id}"> ${developers[i].name}</a> `;
           articleDOM.querySelector("p.description").innerHTML += description;
           for (let i = 0; i < tags.length; i++)
-            articleDOM.querySelector("p.tags span").innerHTML +=
-              tags[i].name + " ";
+            articleDOM.querySelector(
+              "p.tags span"
+            ).innerHTML += `<a class="link-name ml-2" href="#gamelist/?tags=${tags[i].id}"> ${tags[i].name}</a> `;
           for (let i = 0; i < genres.length; i++)
-            articleDOM.querySelector("p.genres span").innerHTML +=
-              genres[i].name + " ";
+            articleDOM.querySelector(
+              "p.genres span"
+            ).innerHTML += `<a class="link-name ml-2" href="#gamelist/?genres=${genres[i].id}"> ${genres[i].name}</a> `;
           for (let i = 0; i < publishers.length; i++)
-            articleDOM.querySelector("p.publishers span").innerHTML +=
-              publishers[i].name + " ";
+            articleDOM.querySelector(
+              "p.publishers span"
+            ).innerHTML += `<a class="link-name ml-2" href="#gamelist/?publishers=${publishers[i].id}"> ${publishers[i].name}</a> `;
           for (let i = 0; i < platforms.length; i++)
-            articleDOM.querySelector("p.platforms-details span").innerHTML +=
-              platforms[i].platform.name + " ";
+            articleDOM.querySelector(
+              "p.platforms-details span"
+            ).innerHTML += `<a class="link-name ml-2" href="#gamelist/?platforms=${platforms[i].platform.id}"> ${platforms[i].platform.name}</a> `;
           if (website !== "") {
             articleDOM.querySelector("p.link a").href = website;
             articleDOM.querySelector("p.link a").innerHTML = website;

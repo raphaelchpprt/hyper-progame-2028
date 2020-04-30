@@ -12,18 +12,6 @@ const GameList = (argument) => {
       selectFilter();
       document.getElementById("welcome-container").remove();
       let finalURL = url;
-      if (
-        argument &&
-        argument !== "Mobile" &&
-        argument !== "Playstation" &&
-        argument !== "Windows" &&
-        argument !== "Linux" &&
-        argument !== "Switch" &&
-        argument !== "Xbox" &&
-        argument !== "Any"
-      ) {
-        finalURL = url + "?search=" + argument;
-      } //else finalURL = url + "?search=" + window.location.hash.substring(10);
       if (argument === "Windows") {
         finalURL = finalURL + "?platforms=4";
       } else if (argument === "Playstation") {
@@ -36,14 +24,24 @@ const GameList = (argument) => {
         finalURL = finalURL + "?platforms=3,21";
       } else if (argument === "Xbox") {
         finalURL = finalURL + "?platforms=1,14";
+      } else if (argument.substring(0, 8) == "?genres=") {
+        finalURL = finalURL + argument;
+      } else if (argument.substring(0, 11) == "?platforms=") {
+        finalURL = finalURL + argument;
+      } else if (argument.substring(0, 12) == "?developers=") {
+        finalURL = finalURL + argument;
+      } else if (argument.substring(0, 6) == "?tags=") {
+        finalURL = finalURL + argument;
+      } else if (argument.substring(0, 12) == "?publishers=") {
+        finalURL = finalURL + argument;
       } else {
-        finalURL = finalURL;
+        finalURL = url + "?search=" + argument;
       }
-
       fetch(`${finalURL}`)
         .then((response) => response.json())
         .then((response) => {
           let games = response.results;
+          console.log(games);
           let gameId = 0;
           games.forEach((article) => {
             articles += `
