@@ -3,6 +3,7 @@ import { Screenshots } from "./screenshots";
 import { Youtube } from "./youtube";
 
 const GameDetail = (argument) => {
+  window.scroll(0, 0);
   const preparePage = () => {
     let cleanedArgument = argument.replace(/\s+/g, "-");
 

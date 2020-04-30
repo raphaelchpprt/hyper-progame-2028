@@ -24,6 +24,8 @@ const GameList = (argument) => {
         finalURL = finalURL + "?platforms=3,21";
       } else if (argument === "Xbox") {
         finalURL = finalURL + "?platforms=1,14";
+      } else if (argument === "Any") {
+        finalURL = finalURL;
       } else if (argument.substring(0, 8) == "?genres=") {
         finalURL = finalURL + argument;
       } else if (argument.substring(0, 11) == "?platforms=") {
@@ -41,8 +43,10 @@ const GameList = (argument) => {
         .then((response) => response.json())
         .then((response) => {
           let games = response.results;
-          console.log(games);
           let gameId = 0;
+          if (games.length === 0) {
+            articles += `<p class="mt-5 ml-md-5">Navré, aucun résultat ne correspond à votre recherche.</p>`;
+          }
           games.forEach((article) => {
             articles += `
                 <div class="col-md-4 col-sm-6 mb-2">
@@ -74,16 +78,19 @@ const GameList = (argument) => {
             );
           let count = 0;
           let cardsShown = 9;
-          if (cardsShown >= games.length) {
-            document.getElementById("show-more").display = "none";
+          if (games.length <= cardsShown) {
+            document.getElementById("show-more").remove();
           }
-          document.getElementById("show-more").onclick = function () {
-            showMore(count, cardsShown, cards, games);
-            if (cardsShown === games.length) {
-              document.getElementById("show-more").display = "none";
-            }
-            count++;
-          };
+          if (document.getElementById("show-more")) {
+            document.getElementById("show-more").onclick = function () {
+              showMore(count, cardsShown, cards, games);
+              if (cardsShown === games.length) {
+                document.getElementById("show-more").display = "none";
+              }
+              count++;
+            };
+          }
+
           games.forEach((article) => {
             if (article.platforms) {
               displayPlatforms(article, gameId);

@@ -26,8 +26,3 @@ document.getElementById("search-form").onsubmit = (e) => {
       document.getElementById("search-input").value.replace(/\s+/g, "+");
   else window.location.hash = "#";
 };
-
-document.getElementById("home").onclick = function () {
-  if (window.location.hash != "#") window.location.hash = "#";
-  document.location.reload(true);
-};
