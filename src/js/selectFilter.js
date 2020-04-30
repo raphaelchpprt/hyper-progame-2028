@@ -17,23 +17,23 @@ const selectFilter = () => {
           Platform: any
         </button>
         <div class="dropdown-menu mt-2">
-          <a class="dropdown-item" href="#">Any</a>
-          <a class="dropdown-item" href="#">Mobile</a>
-          <a class="dropdown-item" href="#">Linux</a>
-          <a class="dropdown-item" href="#">Switch</a>
-          <a class="dropdown-item" href="#">Playstation</a>
-          <a class="dropdown-item" href="#">Xbox</a>
-          <a class="dropdown-item" href="#">Windows</a>
+          <a class="dropdown-item" href="#gamelist/?platforms=">Any</a>
+          <a class="dropdown-item" href="#gamelist/?platforms=3,21">Mobile</a>
+          <a class="dropdown-item" href="#gamelist/?platforms=6">Linux</a>
+          <a class="dropdown-item" href="#gamelist/?platforms=7">Switch</a>
+          <a class="dropdown-item" href="#gamelist/?platforms=16,18">Playstation</a>
+          <a class="dropdown-item" href="#gamelist/?platforms=1,14">Xbox</a>
+          <a class="dropdown-item" href="#gamelist/?platforms=4">Windows</a>
         </div>
       </div>
     `
   );
   let items = document.getElementsByClassName("dropdown-item");
-  for (let i = 0; i < items.length; i++) {
+  /* for (let i = 1; i < items.length; i++) {
     items[i].onclick = function () {
       GameList(items[i].textContent);
     };
-  }
+  } */
 };
 
 export { selectFilter };

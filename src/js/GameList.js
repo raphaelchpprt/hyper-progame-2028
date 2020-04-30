@@ -4,29 +4,16 @@ import { selectFilter } from "./selectFilter";
 import { Overlay } from "./overlay";
 
 const GameList = (argument) => {
+  window.scroll(0, 30);
   const preparePage = () => {
     let cleanedArgument = argument.replace(/\s+/g, "-");
     let articles = "";
 
     const fetchList = (url, argument) => {
       selectFilter();
-      document.getElementById("welcome-container").remove();
       let finalURL = url;
-      if (argument === "Windows") {
-        finalURL = finalURL + "?platforms=4";
-      } else if (argument === "Playstation") {
-        finalURL = finalURL + "?platforms=16,18";
-      } else if (argument === "Linux") {
-        finalURL = finalURL + "?platforms=6";
-      } else if (argument === "Switch") {
-        finalURL = finalURL + "?platforms=7";
-      } else if (argument === "Mobile") {
-        finalURL = finalURL + "?platforms=3,21";
-      } else if (argument === "Xbox") {
-        finalURL = finalURL + "?platforms=1,14";
-      } else if (argument === "Any") {
-        finalURL = finalURL;
-      } else if (argument.substring(0, 8) == "?genres=") {
+      document.getElementById("welcome-container").remove();
+      if (argument.substring(0, 8) == "?genres=") {
         finalURL = finalURL + argument;
       } else if (argument.substring(0, 11) == "?platforms=") {
         finalURL = finalURL + argument;

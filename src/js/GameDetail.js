@@ -119,12 +119,12 @@ const GameDetail = (argument) => {
           <p class="font-weight-bold platforms-details">Platforms: <span class="font-weight-normal"></span></p>
           <h1 class="mt-5 text-danger">Website</h1>
           <p class="link mt-4"><a class="link-name"></a></p>
+          <h1 class="mt-5 mb-3 text-danger">Buy</h1>
+          <p class="link-stores mt-4 font-weight-bold"></p>
           <h1 class="mt-5 mb-3 text-danger">Trailer</h1>
           <video controls width="100%"></video>
           <h1 class="mt-5 mb-3 text-danger">Previews</h1>
           <div class="row screenshots"></div>
-          <h1 class="mt-5 mb-3 text-danger">Buy</h1>
-          <p class="link-stores mt-4 font-weight-bold"></p>
           <h1 class="mt-5 mb-3 text-danger">Similar Games</h1>
           <div class="row suggestions"></div>
           <h1 class="mt-5 mb-3 text-danger">Youtube</h1>
