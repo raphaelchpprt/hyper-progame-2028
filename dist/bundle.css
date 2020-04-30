@@ -9985,6 +9985,7 @@ body {
 #brand {
   color: #db2020;
   font-size: 100px;
+  font-weight: bold;
 }
 
 .link-name,
@@ -10109,4 +10110,13 @@ label:before {
 
 #home {
   font-size: 2rem;
+}
+
+.badge-danger {
+  background-color: #db2020 !important;
+  font-size: 15px;
+}
+
+hr {
+  border: 1px solid #db2020;
 }

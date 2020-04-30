@@ -10,6 +10,7 @@ const GameList = (argument) => {
 
     const fetchList = (url, argument) => {
       selectFilter();
+      document.getElementById("welcome-container").remove();
       let finalURL = url;
       if (
         argument &&
