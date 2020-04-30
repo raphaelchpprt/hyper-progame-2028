@@ -1,5 +1,6 @@
+import { GameList } from "./GameList";
+
 const selectFilter = () => {
-  console.log("yo");
   document.getElementById("page-list").insertAdjacentHTML(
     "afterbegin",
     `
@@ -8,18 +9,23 @@ const selectFilter = () => {
           Platform: any
         </button>
         <div class="dropdown-menu mt-2">
-          <a class="dropdown-item" href="#">Android</a>
-          <a class="dropdown-item" href="#">iOs</a>
+          <a class="dropdown-item" href="#">Any</a>
+          <a class="dropdown-item" href="#">Mobile</a>
           <a class="dropdown-item" href="#">Linux</a>
-          <a class="dropdown-item" href="#">Nintendo Switch</a>
-          <a class="dropdown-item" href="#">Playstation 3</a>
-          <a class="dropdown-item" href="#">Playstation 4</a>
+          <a class="dropdown-item" href="#">Switch</a>
+          <a class="dropdown-item" href="#">Playstation</a>
           <a class="dropdown-item" href="#">Xbox</a>
           <a class="dropdown-item" href="#">Windows</a>
         </div>
       </div>
     `
   );
+  let items = document.getElementsByClassName("dropdown-item");
+  for (let i = 0; i < items.length; i++) {
+    items[i].onclick = function () {
+      GameList(items[i].textContent);
+    };
+  }
 };
 
 export { selectFilter };

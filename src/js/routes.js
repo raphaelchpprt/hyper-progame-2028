@@ -5,7 +5,7 @@ import { GameDetail } from "./GameDetail";
 const routes = {
   "": Home,
   gamelist: GameList,
-  gamedetail: GameDetail,
+  game: GameDetail,
 };
 
 export { routes };

@@ -4,9 +4,27 @@ $red: rgb(219, 32, 32);
 $bg-black: #151515;
 $br: 10px;
 
+@mixin card {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: $br;
+  border-top-right-radius: $br;
+}
+
+@mixin gamename {
+  text-decoration: none;
+  color: white;
+}
+
 @font-face {
   font-family: "Big Noodles";
   src: url("../font/big_noodle_titling.ttf");
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
 }
 
 h1 {
@@ -15,17 +33,14 @@ h1 {
 }
 
 .card-img-top {
-  height: 200px;
-  object-fit: cover;
-  border-top-left-radius: $br;
-  border-top-right-radius: $br;
+  @include card;
 }
 
 .cardGame {
   border: none;
   background-color: #202020;
   color: white;
-  height: 350px;
+  min-height: 350px;
   border-radius: $br;
   transition: all 0.3s ease-in-out;
   transform: scale(1);
@@ -112,8 +127,7 @@ body {
 }
 
 .game-name {
-  text-decoration: none;
-  color: white;
+  @include gamename;
 }
 
 .game-name:hover {
@@ -157,4 +171,12 @@ label:before {
   bottom: 0;
   width: 20px;
   background: url("../images/zoom.svg") center / contain no-repeat;
+}
+
+.text-danger {
+  color: $red !important;
+}
+
+.youtube-videos {
+  height: 200px;
 }

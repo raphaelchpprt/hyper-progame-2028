@@ -9965,7 +9965,7 @@ h1 {
   border: none;
   background-color: #202020;
   color: white;
-  height: 350px;
+  min-height: 350px;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
   transform: scale(1);
@@ -10097,4 +10097,12 @@ label:before {
   bottom: 0;
   width: 20px;
   background: url(images/f84690aa067b8a845f9bc17173f77e72.svg) center/contain no-repeat;
+}
+
+.text-danger {
+  color: #db2020 !important;
+}
+
+.youtube-videos {
+  height: 200px;
 }
