@@ -7,7 +7,7 @@ const Screenshots = (id) => {
       screens.forEach((screen) => {
         if (screen.is_deleted === false)
           document.querySelector(".screenshots").innerHTML += `
-            <div class="col-md-4 col-sm-6"><img src="${screen.image}" class="img-fluid mb-5"></img></div>
+            <div class="col-md-4 col-sm-6 mt-4"><img src="${screen.image}" class="img-fluid mb-5"></img></div>
             `;
       });
     });
