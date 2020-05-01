@@ -87,15 +87,13 @@ const GameList = (argument) => {
             }
             Overlay(article.id);
           });
-          setTimeout(function () {
-            document.querySelector("footer").innerHTML = `
+          document.querySelector("footer").innerHTML = `
             <h1>
               <a href="https://github.com/raphaelchpprt/hyper-progame-2028" target="_blank">
                 <i class="fab fa-github text-white"></i>
               </a>
             </h1>
           `;
-          }, 1000);
         });
     };
 
