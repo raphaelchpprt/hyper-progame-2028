@@ -103,7 +103,7 @@ const GameList = (argument) => {
   const render = () => {
     pageContent.innerHTML = `
       <section class="page-list" id="page-list">
-        <div class="row"><div class="mt-5 ml-5">...loading</div></div>
+        <div class="row"><div class="mt-5 ml-5"><div class="fa-3x"><i class="fas fa-spinner fa-pulse text-white"></i></div></div></div>
       </section>
     `;
 

@@ -79,7 +79,7 @@ const Home = () => {
           document.querySelector("footer").innerHTML = `
           <h1>
             <a href="https://github.com/raphaelchpprt/hyper-progame-2028" target="_blank">
-              <i class="fab fa-github text-white"></i>
+              <i class="fab fa-github text-white" href="https://github.com/raphaelchpprt/hyper-progame-2028" target="_blank"></i>
             </a>
           </h1>
           `;
@@ -92,7 +92,7 @@ const Home = () => {
   const render = () => {
     pageContent.innerHTML = `
       <section class="page-list" id="page-list">
-        <div class="row"><div class="mt-5 ml-5">...loading</div></div>
+        <div class="row"><div class="mt-5 ml-5"><div class="fa-3x"><i class="fas fa-spinner fa-pulse text-white"></i></div></div></div>
       </section>
     `;
 
