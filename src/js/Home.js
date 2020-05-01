@@ -15,12 +15,15 @@ const Home = () => {
         "-" +
         String(("0" + (d.getMonth() + 1)).slice(-2)) +
         "-" +
-        String(d.getDate()) +
+        String(("0" + d.getDate()).slice(-2)) +
         "&ordering=-added";
       fetch(`${dateUrl}`)
         .then((response) => response.json())
         .then((response) => {
+          console.log(dateUrl);
+
           let games = response.results;
+          console.log(games);
           let gameId = 0;
           selectFilter();
           setTimeout(function () {
