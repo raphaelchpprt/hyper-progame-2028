@@ -20,10 +20,7 @@ const Home = () => {
       fetch(`${dateUrl}`)
         .then((response) => response.json())
         .then((response) => {
-          console.log(dateUrl);
-
           let games = response.results;
-          console.log(games);
           let gameId = 0;
           selectFilter();
           setTimeout(function () {
