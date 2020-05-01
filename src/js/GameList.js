@@ -5,6 +5,7 @@ import { Overlay } from "./overlay";
 
 const GameList = (argument) => {
   window.scroll(0, 30);
+  document.querySelector("footer").innerHTML = "";
   const preparePage = () => {
     let cleanedArgument = argument.replace(/\s+/g, "-");
     let articles = "";
@@ -86,6 +87,15 @@ const GameList = (argument) => {
             }
             Overlay(article.id);
           });
+          setTimeout(function () {
+            document.querySelector("footer").innerHTML = `
+            <h1>
+              <a href="https://github.com/raphaelchpprt/hyper-progame-2028" target="_blank">
+                <i class="fab fa-github text-white"></i>
+              </a>
+            </h1>
+          `;
+          }, 1000);
         });
     };
 

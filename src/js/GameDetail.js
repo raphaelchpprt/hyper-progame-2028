@@ -4,6 +4,7 @@ import { Youtube } from "./youtube";
 
 const GameDetail = (argument) => {
   window.scroll(0, 0);
+  document.querySelector("footer").innerHTML = "";
   const preparePage = () => {
     let cleanedArgument = argument.replace(/\s+/g, "-");
 
@@ -95,6 +96,13 @@ const GameDetail = (argument) => {
           Suggested(id);
           Screenshots(id);
           Youtube(id);
+          document.querySelector("footer").innerHTML = `
+          <h1>
+            <a href="https://github.com/raphaelchpprt/hyper-progame-2028" target="_blank">
+              <i class="fab fa-github text-white"></i>
+            </a>
+          </h1>
+          `;
         });
     };
 
