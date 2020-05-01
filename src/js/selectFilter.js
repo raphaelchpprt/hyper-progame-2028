@@ -1,5 +1,3 @@
-import { GameList } from "./GameList";
-
 const selectFilter = () => {
   document.getElementById("page-list").insertAdjacentHTML(
     "afterbegin",
@@ -13,27 +11,21 @@ const selectFilter = () => {
         with both new and existing partners, industry executives, gamers, and social influencers providing unprecedented exposure.</p><hr class="trans--grow">
       </div>
       <div class="btn-group mt-5">
-        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button id="dropdown" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Platform: any
         </button>
         <div class="dropdown-menu mt-2">
-          <a class="dropdown-item" href="#gamelist/?platforms=">Any</a>
-          <a class="dropdown-item" href="#gamelist/?platforms=3,21">Mobile</a>
-          <a class="dropdown-item" href="#gamelist/?platforms=6">Linux</a>
-          <a class="dropdown-item" href="#gamelist/?platforms=7">Switch</a>
-          <a class="dropdown-item" href="#gamelist/?platforms=16,18">Playstation</a>
-          <a class="dropdown-item" href="#gamelist/?platforms=1,14">Xbox</a>
-          <a class="dropdown-item" href="#gamelist/?platforms=4">Windows</a>
+          <a class="dropdown-item" id="any">Any</a>
+          <a class="dropdown-item" id="mobile">Mobile</a>
+          <a class="dropdown-item" id="linux">Linux</a>
+          <a class="dropdown-item" id="switch">Switch</a>
+          <a class="dropdown-item" id="playstation">Playstation</a>
+          <a class="dropdown-item" id="xbox">Xbox</a>
+          <a class="dropdown-item" id="pc">PC</a>
         </div>
       </div>
     `
   );
-  let items = document.getElementsByClassName("dropdown-item");
-  /* for (let i = 1; i < items.length; i++) {
-    items[i].onclick = function () {
-      GameList(items[i].textContent);
-    };
-  } */
 };
 
 export { selectFilter };

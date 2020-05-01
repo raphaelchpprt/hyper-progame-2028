@@ -2,6 +2,7 @@ import { showMore } from "./showMore";
 import { displayPlatforms } from "./platforms";
 import { selectFilter } from "./selectFilter";
 import { Overlay } from "./overlay";
+import { clickFilter } from "./clickFilter";
 
 const GameList = (argument) => {
   window.scroll(0, 30);
@@ -79,7 +80,7 @@ const GameList = (argument) => {
               count++;
             };
           }
-
+          clickFilter();
           games.forEach((article) => {
             if (article.platforms) {
               displayPlatforms(article, gameId);

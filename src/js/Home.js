@@ -2,6 +2,7 @@ import { showMore } from "./showMore";
 import { displayPlatforms } from "./platforms";
 import { selectFilter } from "./selectFilter";
 import { Overlay } from "./overlay";
+import { clickFilter } from "./clickFilter";
 
 const Home = () => {
   const preparePage = () => {
@@ -68,7 +69,7 @@ const Home = () => {
             }
             count++;
           };
-
+          clickFilter();
           games.forEach((article) => {
             if (article.platforms.length > 0) {
               displayPlatforms(article, gameId);
