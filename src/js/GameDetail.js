@@ -87,7 +87,7 @@ const GameDetail = (argument) => {
           if (stores.length > 0) {
             for (let i = 0; i < stores.length; i++) {
               articleDOM.querySelector(".link-stores").innerHTML = `
-              <a class="link-name" href="${stores[i].url}">${stores[i].store.name}</a>
+              <a class="link-name" href="${stores[i].url}" target="_blank">${stores[i].store.name}</a>
               `;
             }
           } else {
@@ -126,7 +126,7 @@ const GameDetail = (argument) => {
           <p class="font-weight-bold publishers">Publishers: <span class="font-weight-normal"></span></p>
           <p class="font-weight-bold platforms-details">Platforms: <span class="font-weight-normal"></span></p>
           <h1 class="mt-5 text-danger">Website</h1>
-          <p class="link mt-4"><a class="link-name"></a></p>
+          <p class="link mt-4"><a class="link-name" target="_blank"></a></p>
           <h1 class="mt-5 mb-3 text-danger">Buy</h1>
           <p class="link-stores mt-4 font-weight-bold"></p>
           <h1 class="mt-5 mb-3 text-danger">Trailer</h1>
