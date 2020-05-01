@@ -16,7 +16,7 @@ const Home = () => {
         String(("0" + (d.getMonth() + 1)).slice(-2)) +
         "-" +
         String(("0" + d.getDate()).slice(-2)) +
-        "&ordering=-added";
+        "&ordering=-added&page_size=27";
       fetch(`${dateUrl}`)
         .then((response) => response.json())
         .then((response) => {

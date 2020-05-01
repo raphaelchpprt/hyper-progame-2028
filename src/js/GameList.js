@@ -26,6 +26,7 @@ const GameList = (argument) => {
       } else {
         finalURL = url + "?search=" + argument;
       }
+      finalURL = finalURL + "&page_size=27";
       fetch(`${finalURL}`)
         .then((response) => response.json())
         .then((response) => {
