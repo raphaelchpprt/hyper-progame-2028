@@ -10130,3 +10130,7 @@ hr {
 .grow {
   width: 100%;
 }
+
+.dropdown-item {
+  cursor: pointer;
+}
