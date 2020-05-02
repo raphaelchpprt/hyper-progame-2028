@@ -20,7 +20,7 @@ const clickFilter = () => {
       document.getElementById("show-more").style.display = "none";
       document.getElementById(
         "dropdown"
-      ).innerHTML = `Platform: <strong>${items[i].id}</strong>`;
+      ).innerHTML = `Platform: <strong>${items[i].id}</strong> `;
     };
   }
 };
