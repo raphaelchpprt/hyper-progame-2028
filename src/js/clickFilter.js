@@ -17,10 +17,12 @@ const clickFilter = () => {
             cards[j].parentNode.style.display = "block";
           }
       }
-      document.getElementById("show-more").style.display = "none";
+
       document.getElementById(
         "dropdown"
       ).innerHTML = `Platform: <strong>${items[i].id}</strong> `;
+      if (document.getElementById("show-more"))
+        document.getElementById("show-more").style.display = "none";
     };
   }
 };
