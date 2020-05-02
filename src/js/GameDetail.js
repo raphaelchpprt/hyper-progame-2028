@@ -130,7 +130,7 @@ const GameDetail = (argument) => {
           <h1 class="mt-5 mb-3 text-danger">Buy</h1>
           <p class="link-stores mt-4 font-weight-bold"></p>
           <h1 class="mt-5 mb-3 text-danger">Trailer</h1>
-          <video controls width="100%"></video>
+          <video controls width="100%" class="rounded"></video>
           <h1 class="mt-5 mb-3 text-danger">Previews</h1>
           <div class="row screenshots"></div>
           <h1 class="mt-5 mb-3 text-danger">Similar Games</h1>
