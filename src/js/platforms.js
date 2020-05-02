@@ -13,7 +13,7 @@ const displayPlatforms = (game, gameId) => {
   let cards = document.getElementsByClassName("card");
   game.platforms.forEach((platform) => {
     if (platform.platform.slug == "pc") {
-      selector.innerHTML += `<a href="#gamelist/?platforms=${platform.platform.id}"><img class="mr-2 img-platform" src="dist/${windows}"></a>`;
+      selector.innerHTML += `<a href="#gamelist/?platforms=${platform.platform.id}" title="Voir les jeux jouables sur ${platform.platform.name}"><img class="mr-2 img-platform" src="dist/${windows}"></a>`;
       cards[gameId].classList.add("pc");
     }
     if (
@@ -22,7 +22,7 @@ const displayPlatforms = (game, gameId) => {
       platform.platform.slug == "xbox360"
     ) {
       if (xboxCount === 0) {
-        selector.innerHTML += `<a href="#gamelist/?platforms=${platform.platform.id}"><img class="mr-2 img-platform" src="dist/${xbox}" /></a>`;
+        selector.innerHTML += `<a href="#gamelist/?platforms=${platform.platform.id}" title="Voir les jeux jouables sur ${platform.platform.name}"><img class="mr-2 img-platform" src="dist/${xbox}" /></a>`;
         cards[gameId].classList.add("xbox");
         xboxCount++;
       }
@@ -32,25 +32,25 @@ const displayPlatforms = (game, gameId) => {
       platform.platform.slug == "playstation3"
     ) {
       if (playstationCount === 0) {
-        selector.innerHTML += `<a href="#gamelist/?platforms=${platform.platform.id}"><img class="mr-2 img-platform" src="dist/${ps4}" /></a>`;
+        selector.innerHTML += `<a href="#gamelist/?platforms=${platform.platform.id}" title="Voir les jeux jouables sur ${platform.platform.name}"><img class="mr-2 img-platform" src="dist/${ps4}" /></a>`;
         cards[gameId].classList.add("playstation");
         playstationCount++;
       }
     }
     if (platform.platform.slug == "linux") {
-      selector.innerHTML += `<a href="#gamelist/?platforms=${platform.platform.id}"><img class="mr-2 img-platform" src="dist/${linux}" /></a>`;
+      selector.innerHTML += `<a href="#gamelist/?platforms=${platform.platform.id}" title="Voir les jeux jouables sur ${platform.platform.name}"><img class="mr-2 img-platform" src="dist/${linux}" /></a>`;
       cards[gameId].classList.add("linux");
     }
     if (
       (platform.platform.slug == "android" && mobileCount === 0) ||
       (platform.platform.slug == "ios" && mobileCount === 0)
     ) {
-      selector.innerHTML += `<a href="#gamelist/?platforms=${platform.platform.id}"><img class="mr-2 img-platform" src="dist/${mobile}" /></a>`;
+      selector.innerHTML += `<a href="#gamelist/?platforms=${platform.platform.id}" title="Voir les jeux jouables sur ${platform.platform.name}"><img class="mr-2 img-platform" src="dist/${mobile}" /></a>`;
       cards[gameId].classList.add("mobile");
       mobileCount++;
     }
     if (platform.platform.slug == "nintendo-switch") {
-      selector.innerHTML += `<a href="#gamelist/?platforms=${platform.platform.id}"><img class="mr-2 img-platform" src="dist/${Switch}" /></a>`;
+      selector.innerHTML += `<a href="#gamelist/?platforms=${platform.platform.id}" title="Voir les jeux jouables sur ${platform.platform.name}"><img class="mr-2 img-platform" src="dist/${Switch}" /></a>`;
       cards[gameId].classList.add("switch");
     }
   });
