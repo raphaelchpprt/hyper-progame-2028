@@ -14,7 +14,7 @@ const selectFilter = () => {
         <button id="dropdown" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Platform: any
         </button>
-        <div class="dropdown-menu mt-2">
+        <div class="dropdown-menu mt-2 mb-2">
           <a class="dropdown-item" id="any">Any</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" id="mobile">Mobile</a>
