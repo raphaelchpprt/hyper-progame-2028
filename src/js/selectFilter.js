@@ -16,6 +16,7 @@ const selectFilter = () => {
         </button>
         <div class="dropdown-menu mt-2">
           <a class="dropdown-item" id="any">Any</a>
+          <div class="dropdown-divider"></div>
           <a class="dropdown-item" id="mobile">Mobile</a>
           <a class="dropdown-item" id="linux">Linux</a>
           <a class="dropdown-item" id="switch">Switch</a>
