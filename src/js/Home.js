@@ -87,7 +87,7 @@ const Home = () => {
         });
     };
 
-    fetchList("https://api.rawg.io/api/games?key=e7b570bb89e94b06ad126665222223a4&dates=2020-01-01,");
+    fetchList("https://api.rawg.io/api/games?key=e7b570bb89e94b06ad126665222223a4&dates=2021-01-01,");
   };
 
   const render = () => {
